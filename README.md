@@ -57,6 +57,9 @@ This project uses an AWS Lambda function (written in Python using Boto3) to:
     }
   ]
 }
+
+---
+
 ⏱️ (Optional) Automation with EventBridge
 To run this Lambda on a schedule (e.g., daily/weekly), you can add an EventBridge rule:
 
@@ -66,6 +69,8 @@ Create rule → Schedule pattern → Choose rate or cron
 
 Target: Your Lambda function
 
+---
+
 ✅ Benefits
 💸 Reduces unnecessary AWS storage costs
 
@@ -73,8 +78,12 @@ Target: Your Lambda function
 
 🔒 Enforces least privilege IAM best practices
 
+---
+
 📌 Tags
 AWS Lambda · EBS · Cloud Cost Optimization · Infrastructure Hygiene · boto3 · IAM
+
+---
 
 👤 Author
 Prasad Vinod Pardeshi
