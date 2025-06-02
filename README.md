@@ -56,22 +56,3 @@ This project uses an AWS Lambda function (written in Python using Boto3) to:
       "Resource": "*"
     }
   ]
-}
-
-
-⏱️ (Optional) Automation with EventBridge
-To run this Lambda on a schedule (e.g., daily/weekly), you can add an EventBridge rule:
-
-Go to Amazon EventBridge
-
-Create rule → Schedule pattern → Choose rate or cron
-
-Target: Your Lambda function
-
-
-
-👤 Author
-Prasad Vinod Pardeshi
-🔗 LinkedIn
-🐙 GitHub
-📫 pardeshiprasad42@gmail.com
