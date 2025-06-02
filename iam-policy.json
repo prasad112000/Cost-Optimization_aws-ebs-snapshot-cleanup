@@ -1,0 +1,23 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowSnapshotActions",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeSnapshots",
+        "ec2:DeleteSnapshot"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "AllowDescribeInstancesAndVolumes",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeInstances",
+        "ec2:DescribeVolumes"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
