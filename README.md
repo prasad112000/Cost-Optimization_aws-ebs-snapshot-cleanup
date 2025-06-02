@@ -40,19 +40,37 @@ This project uses an AWS Lambda function (written in Python using Boto3) to:
 
 ## 🔐 IAM Policy (Least Privilege)
 
-```json
 {
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "EBSDeletePermission",
+      "Sid": "AllowSnapshotActions",
       "Effect": "Allow",
       "Action": [
         "ec2:DescribeSnapshots",
-        "ec2:DescribeInstances",
-        "ec2:DescribeVolumes",
         "ec2:DeleteSnapshot"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "AllowDescribeInstancesAndVolumes",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeInstances",
+        "ec2:DescribeVolumes"
       ],
       "Resource": "*"
     }
   ]
+}
+
+⏱️ (Optional) Automation with EventBridge
+To run this Lambda on a schedule (e.g., daily/weekly), you can add an EventBridge rule:
+
+Go to Amazon EventBridge
+
+Create rule → Schedule pattern → Choose rate or cron
+
+Target: Your Lambda function
+
+
